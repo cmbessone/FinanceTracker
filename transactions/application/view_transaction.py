@@ -5,6 +5,5 @@ class ViewTransaction:
         self.repository = repository
     
     def execute(self, start_date: str, end_date: str):
-        return self.repository.get_transaction_by_date(start_date, end_date)
-    
+        return self.repository.get_transactions_by_date(start_date, end_date)
     
