@@ -4,10 +4,10 @@ from domain.transaction import Transaction
 from domain.transaction_repository import TransactionRepository
 
 class CSVRepository(TransactionRepository):
-    CSV_FILE = "finance_data.csv"
-    COLUMNS = ["date", "amount", "category", "description"]
 
-    def __init__(self):
+    def __init__(self, csv_file: str = "finance_data.csv"):
+        self.CSV_FILE = csv_file
+        self.COLUMNS = ["date", "amount", "category", "description"]
         self.initalize_csv()
 
     def initalize_csv(self):
