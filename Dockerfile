@@ -11,7 +11,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar el código fuente de la aplicación
-COPY . .
+COPY transactions/ .
 
 # Exponer el puerto 8000 para FastAPI
 EXPOSE 8000
